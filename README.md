@@ -308,6 +308,15 @@ export MASTER_ADDR=<rank-0-host>
 export MASTER_PORT=6667
 ```
 
+Slurm launch examples are also available:
+
+```bash
+sbatch scripts/train_slurm/ablation_ot_slurm.sh
+sbatch scripts/train_slurm/latent_sota_B_ot_slurm.sh
+sbatch scripts/train_slurm/latent_sota_L_ot_slurm.sh
+sbatch scripts/train_slurm/latent_sota_XL_ot_slurm.sh
+```
+
 You can also call the trainer directly:
 
 ```bash
@@ -353,6 +362,7 @@ configs/gen/              # W-Flow ImageNet configs
 dataset/                  # ImageNet and latent-cache datasets
 models/                   # DiT generator and MAE feature encoder
 scripts/train/            # Training launch scripts
+scripts/train_slurm/      # Slurm training launch scripts
 scripts/eval_fid/         # FID evaluation scripts
 scripts/sample/           # Visualization script
 utils/                    # Checkpointing, distributed, FID, logging, setup utilities

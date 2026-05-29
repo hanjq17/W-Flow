@@ -380,9 +380,9 @@ notebooks/                # Interactive visualization notebook
 }
 ```
 
-<!-- ## 📬 Contact
+## 📬 Contact
 
-For questions about the paper or codebase, please contact Jiaqi Han (`jiaqihan@stanford.edu`) and Puheng Li (`puhengli@stanford.edu`). -->
+For questions about the paper or codebase, please contact Jiaqi Han (`jiaqihan@stanford.edu`) and Puheng Li (`puhengli@stanford.edu`).
 
 ## 🗒️ Acknowledgments
 

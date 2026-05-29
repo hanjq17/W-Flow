@@ -308,15 +308,6 @@ export MASTER_ADDR=<rank-0-host>
 export MASTER_PORT=6667
 ```
 
-Slurm launch examples are also available:
-
-```bash
-sbatch scripts/train_slurm/ablation_ot_slurm.sh
-sbatch scripts/train_slurm/latent_sota_B_ot_slurm.sh
-sbatch scripts/train_slurm/latent_sota_L_ot_slurm.sh
-sbatch scripts/train_slurm/latent_sota_XL_ot_slurm.sh
-```
-
 You can also call the trainer directly:
 
 ```bash
@@ -330,6 +321,16 @@ torchrun --nproc_per_node=8 train.py \
 - During training, checkpoints are written under `<workdir>/checkpoints/`, and periodic FID preview evaluation is controlled by `train.eval_per_step` and `train.cfg_list` in the config. Note that the FID metrics logged during training are just for reference; refer to "📊 FID Evaluation" for computing the precise FID metrics.
 
 - The config field `train.ot_mode` selects the loss implementation: `"debiased"` uses the W-Flow OT loss, while `"none"` uses the original drifting loss in `drift_loss.py`, which could serve as an unofficial PyTorch implementation of drifting models. Note that we never report results obtained by this implementation of drifting model in our paper; we always cite the results reported in their original paper.
+
+
+Slurm launch examples are also available:
+
+```bash
+sbatch scripts/train_slurm/ablation_ot_slurm.sh
+sbatch scripts/train_slurm/latent_sota_B_ot_slurm.sh
+sbatch scripts/train_slurm/latent_sota_L_ot_slurm.sh
+sbatch scripts/train_slurm/latent_sota_XL_ot_slurm.sh
+```
 
 ## 📦 Checkpoint Format
 

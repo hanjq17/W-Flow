@@ -16,7 +16,6 @@ from dataset.dataset import get_postprocess_fn
 from models.generator import DitGen
 from utils.dist_util import barrier, init_distributed, process_count, process_index
 from utils.env import IMAGENET_FID_NPZ
-from utils.fidelity_wrapper import calculate_metrics
 from utils.misc import load_config, run_init
 
 run_init()
@@ -187,6 +186,10 @@ def run_eval(
     gen_bsz: int, fid_ref: str, seed: int,
     keep_samples: bool, device: torch.device,
 ) -> dict | None:
+    calculate_metrics = None
+    if process_index() == 0:
+        from utils.fidelity_wrapper import calculate_metrics
+
     save_folder = os.path.join(workdir, "fid_outputs")
 
     t0 = time.time()

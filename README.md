@@ -373,9 +373,9 @@ notebooks/                # Interactive visualization notebook
 ## 📌 Citation
 
 ```bibtex
-@article{han2026onestep,
+@article{han2026one,
   title={One-Step Generative Modeling via Wasserstein Gradient Flows},
-  author={Han, Jiaqi and Li, Puheng and Guo, Qiushan and Xu, Renyuan and Ermon, Stefano and Candes, Emmanuel},
+  author={Han, Jiaqi and Li, Puheng and Guo, Qiushan and Xu, Renyuan and Ermon, Stefano and Cand{\`e}s, Emmanuel J},
   journal={arXiv preprint arXiv:2605.11755},
   year={2026}
 }
